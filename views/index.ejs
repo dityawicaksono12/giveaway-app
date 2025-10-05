@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing - PrebuiltUI</title>
+    <title>Giveaway Landing Page</title>
     <link rel="stylesheet" href="/output.css">
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1zB9F3k8uG1n9X9E5pW9x8F9B6k9Z9s" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
@@ -15,28 +15,6 @@
         <a href="/">
             <img id="logo" src="/assets/logo-dark.svg" alt="Logo" class="h-9 md:h-9.5 w-auto shrink-0">
         </a>
-        <div class="hidden items-center md:gap-8 lg:gap-12 md:flex lg:pl-20">
-            <a href="/" class="hover:text-slate-600 dark:hover:text-slate-300">Home</a>
-            <a href="/features" class="hover:text-slate-600 dark:hover:text-slate-300">Features</a>
-            <a href="/pricing" class="hover:text-slate-600 dark:hover:text-slate-300">Pricing</a>
-            <a href="/docs" class="hover:text-slate-600 dark:hover:text-slate-300">Docs</a>
-        </div>
-        <div id="mobileMenu" class="fixed inset-0 flex flex-col items-center justify-center gap-6 text-lg font-medium bg-white/60 dark:bg-black/40 backdrop-blur-md md:hidden transition duration-300 -translate-x-full">
-            <a href="/">Home</a>
-            <a href="/features">Features</a>
-            <a href="/pricing">Pricing</a>
-            <a href="/docs">Docs</a>
-            <button>Sign in</button>
-            <button id="closeMenu"
-                class="aspect-square size-10 p-1 items-center justify-center bg-purple-600 hover:bg-purple-700 transition text-white rounded-md flex">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-x-icon lucide-x">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
-            </button>
-        </div>
         <div class="flex items-center gap-4 md:gap-6">
             <button id="themeToggle" class="flex items-center justify-center size-9 p-2 rounded-full bg-slate-950/5 hover:bg-slate-950/10 dark:bg-white/10 dark:hover:bg-white/20 transition-colors duration-200 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -45,12 +23,6 @@
                     <circle cx="12" cy="12" r="4" />
                     <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
                 </svg>
-            </button>
-            <button class="hidden md:block hover:bg-slate-100 dark:hover:bg-purple-950 transition px-4 py-2 border border-purple-600 rounded-md">
-                Sign in
-            </button>
-            <button class="hidden md:block px-4 py-2 bg-purple-600 hover:bg-purple-700 transition text-white rounded-md">
-                Get started
             </button>
             <button id="openMenu" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -88,15 +60,6 @@
             <button hx-get="/buy-tickets-form" hx-target="#content" hx-swap="outerHTML" class="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
                 Buy Tickets
             </button>
-            <button class="flex items-center gap-2 border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-video-icon lucide-video">
-                    <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-                    <rect x="2" y="6" width="14" height="12" rx="2" />
-                </svg>
-                <span>Watch demo</span>
-            </button>
         </div>
         <h3 class="text-base text-center text-slate-400 mt-28 pb-14 font-medium">
             Trusting by leading brands, including —
@@ -110,34 +73,6 @@
         </div>
     </div>
     
-    <div class="relative max-w-xl mx-auto flex flex-col items-center justify-center px-4 md:px-0 mt-20">
-        <img id="faqSplash" class="absolute -mb-120 -left-40 -z-10" src="/assets/color-splash-light.svg" alt="color-splash" width="1000" height="1000">
-        <div class="text-center">
-            <p class="text-center font-medium text-indigo-600 dark:text-indigo-400 mt-28 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">FAQ's</p>
-            <h2 class="text-3xl font-semibold text-center mx-auto mt-4">Frequently asked questions</h2>
-            <p class="mt-2 text-slate-500 dark:text-slate-300 max-w-xl mx-auto">
-                Ship Beautiful Frontends Without the Overhead — Customizable, Scalable, and Developer-Friendly UI
-                Components.
-            </p>
-        </div>
-        <div id="faq-container" class="mt-8 w-full"></div>
-    </div>
-
-    <div class="flex flex-col items-center text-center justify-center mt-20">
-        <h3 class="text-3xl font-semibold mt-16 mb-4">Ready to Get Started?</h3>
-        <p class="text-slate-600 dark:text-slate-200 max-w-xl mx-auto">
-            Join thousands of satisfied customers and transform your business today.
-        </p>
-        <div class="flex items-center gap-4 mt-8">
-            <button hx-get="/buy-tickets-form" hx-target="#content" hx-swap="outerHTML" class="bg-purple-600 hover:bg-purple-700 transition text-white rounded-md px-6 h-11">
-                Buy Tickets
-            </button>
-            <button class="border border-purple-900 transition text-slate-600 dark:text-white rounded-md px-6 h-11">
-                Contact sales
-            </button>
-        </div>
-    </div>
-
     <footer class="relative px-6 md:px-16 lg:px-24 xl:px-32 mt-40 w-full dark:text-slate-50">
         <img id="landing-text" class="absolute max-w-4xl w-full h-auto -mt-30 max-md:px-4 right-0 md:right-16 lg:right-24 xl:right-32 top-0 pointer-events-none"
             src="/assets/landing-text-light.svg" alt="landing" width={930} height={340} priority fetchPriority="high" />
